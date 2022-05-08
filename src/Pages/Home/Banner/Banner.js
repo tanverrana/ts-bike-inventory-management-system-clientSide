@@ -8,28 +8,30 @@ const Banner = () => {
         setIndex(selectedIndex);
     };
     return (
-        <Carousel activeIndex={index} onSelect={handleSelect} className="container">
-            <Carousel.Item>
-                <img
-                    className="d-block w-100 img-fluid"
-                    height="550px"
-                    src="https://pbs.twimg.com/media/EoZq627U0AESf3D.jpg:large"
-                    alt="First slide"
-                />
+        <div className="mt-3">
+            <Carousel activeIndex={index} onSelect={handleSelect} className="container">
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100 img-fluid"
+                        height="550px"
+                        src="https://pbs.twimg.com/media/EoZq627U0AESf3D.jpg:large"
+                        alt="First slide"
+                    />
 
-            </Carousel.Item>
-            <Carousel.Item>
-                <img
-                    className="d-block w-100 img-fluid"
-                    height="550px"
-                    src="https://4b4484781e2008fab587-e20327036cbb7cd3b54853c4c640b747.ssl.cf1.rackcdn.com/slider/5d923fed2a0ab70e68ccaefc/offer-22-gor-mcy-1920-02012022.jpg"
-                    alt="Second slide"
-                />
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100 img-fluid"
+                        height="550px"
+                        src="https://4b4484781e2008fab587-e20327036cbb7cd3b54853c4c640b747.ssl.cf1.rackcdn.com/slider/5d923fed2a0ab70e68ccaefc/offer-22-gor-mcy-1920-02012022.jpg"
+                        alt="Second slide"
+                    />
 
 
-            </Carousel.Item>
+                </Carousel.Item>
 
-        </Carousel>
+            </Carousel>
+        </div>
     );
 };
 
