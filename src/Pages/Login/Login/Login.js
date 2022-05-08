@@ -19,9 +19,16 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    let errorElement;
 
     if (user) {
         navigate(from, { replace: true });
+    }
+    if (error) {
+        errorElement = <div>
+            <p className="text-danger">Error: {error.message}</p>
+        </div>
+
     }
 
     const handleSubmit = event => {
@@ -56,6 +63,7 @@ const Login = () => {
                         Login
                     </Button>
                 </Form>
+                {errorElement}
 
                 <p>New to TS Bike Inventory Management? <Link className="text-danger text-decoration-none" to="/register" onClick={navigateRegister}>Please Register</Link></p>
                 <p>Forget Password? <button className="btn btn-link text-danger text-decoration-none">Reset Password.</button></p>
