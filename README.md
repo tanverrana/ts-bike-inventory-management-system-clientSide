@@ -1,4 +1,29 @@
-# Getting Started with Create React App
+# TS Bike Inventory Management System
+Live Site[Click Here]()
+
+## Features Of My website
+* User Sign In & Register
+* Forget or Reset Password
+* Protected Route & Verify User Email
+* User Can Update Inventory Quantity
+* User can Add New Items.
+
+## Using Technologies (Framework)
+* HTML
+* CSS
+* Bootstrap
+* React Bootstrap
+* JavaScript
+* React
+* React Hooks
+* React Routes
+* Firebase
+* Mongodb Database
+* Node JS
+
+
+My stackoverflow question [click here](https://stackoverflow.com/questions/72166960/how-to-change-state-and-mongodb-database-at-the-same-time-in-react).
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

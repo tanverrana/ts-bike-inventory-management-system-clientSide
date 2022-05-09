@@ -25,7 +25,7 @@ const Inventory = () => {
                 <p><small>Supplier:{inventory.supplier}</small></p>
             </div>
             <div className="text-center">
-                <button className="btn btn-primary m-4">Deliver</button> <button className="btn btn-primary">Add</button>
+                <button className="btn btn-primary m-4">Deliver Items</button>
             </div>
         </div>
     );
