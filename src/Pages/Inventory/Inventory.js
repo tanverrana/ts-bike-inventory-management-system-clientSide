@@ -9,7 +9,7 @@ const Inventory = () => {
     const [inventory, setInventory] = useState({});
 
     useEffect(() => {
-        const url = `http://localhost:5000/inventory/${inventoryId}`;
+        const url = `https://hidden-mountain-55402.herokuapp.com/inventory/${inventoryId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setInventory(data));
@@ -21,7 +21,7 @@ const Inventory = () => {
         //console.log(quantity);
 
         const updateQuantity = { quantity };
-        const url = `http://localhost:5000/inventory/${inventoryId}`;
+        const url = `https://hidden-mountain-55402.herokuapp.com/inventory/${inventoryId}`;
         fetch(url, {
             method: "PUT",
             headers: {
