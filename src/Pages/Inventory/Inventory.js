@@ -13,6 +13,28 @@ const Inventory = () => {
             .then(res => res.json())
             .then(data => setInventory(data));
     }, [])
+
+    const handleQuantity = event => {
+        event.preventDefault();
+        const quantity = event.target.quantity.value;
+        //console.log(quantity);
+
+        const updateQuantity = { quantity };
+        const url = `http://localhost:5000/inventory/${inventoryId}`;
+        fetch(url, {
+            method: "PUT",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(updateQuantity)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log("Success", data);
+                alert("Quantity Update successfully");
+                event.target.reset();
+            })
+    }
     return (
         <div className="container">
             <h2>Selected Inventory Id:{inventoryId}</h2>
@@ -26,6 +48,13 @@ const Inventory = () => {
             </div>
             <div className="text-center">
                 <button className="btn btn-primary m-4">Deliver Items</button>
+            </div>
+            <div className="text-center my-3">
+                <h1 className="text-primary">Update Your Quantity</h1>
+                <form onSubmit={handleQuantity}>
+                    <input type="number" name="quantity" placeholder="Number Of Quantity" required />
+                    <input type="submit" className="btn btn-primary" value="Add" />
+                </form>
             </div>
         </div>
     );
