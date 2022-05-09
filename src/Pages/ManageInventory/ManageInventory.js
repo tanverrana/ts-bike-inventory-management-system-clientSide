@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useInventory from '../../hooks/useInventory';
 
 const ManageInventory = () => {
@@ -23,7 +24,7 @@ const ManageInventory = () => {
 
     return (
         <div className="container">
-            <h2>Manage Inventory</h2>
+            <h2>Manage Your Inventory Items</h2>
             <div className="products-container">
                 {
                     products.map(product => <div className="product-container" key={product._id}>
@@ -36,6 +37,9 @@ const ManageInventory = () => {
                         <button className="btn btn-primary" onClick={() => handleDelete(product._id)}>Delete</button>
                     </div>)
                 }
+            </div>
+            <div className="text-center m-5">
+                <Link to="/addproducts"><button className="btn btn-primary">Add Inventory Items</button></Link>
             </div>
         </div>
     );
