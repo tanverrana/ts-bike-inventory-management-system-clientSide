@@ -3,7 +3,7 @@ import React from 'react';
 const Partners = () => {
     return (
         <div className="container text-center">
-            <h1>Our Partners</h1>
+            <h1 className="text-bold text-primary">Our Partners</h1>
             <div>
                 <img src="https://www.clipartkey.com/mpngs/m/139-1399190_yamaha-jet-skis-for-sale-yamaha-two-wheeler.png" height="300px" alt="" />
                 <img src="https://www.jing.fm/clipimg/detail/9-95275_honda-bike-logo-png.png" height="300px" width="300px" alt="" />

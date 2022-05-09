@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
+import "./Inventory.css";
 
 const Inventory = () => {
     const { inventoryId } = useParams();
@@ -38,7 +39,7 @@ const Inventory = () => {
     return (
         <div className="container">
             <h2>Selected Inventory Id:{inventoryId}</h2>
-            <div className="product-container">
+            <div className="inventory-container">
                 <img height="300px" width="300px" src={inventory.img} alt="" />
                 <h2>{inventory.name}</h2>
                 <h5>Price:${inventory.price}</h5>
