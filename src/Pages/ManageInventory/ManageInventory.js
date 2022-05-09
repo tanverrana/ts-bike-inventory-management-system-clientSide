@@ -24,7 +24,7 @@ const ManageInventory = () => {
 
     return (
         <div className="container">
-            <h2>Manage Your Inventory Items</h2>
+            <h1 className="text-center text-primary">Manage Your Inventory Items</h1>
             <div className="products-container">
                 {
                     products.map(product => <div className="product-container" key={product._id}>

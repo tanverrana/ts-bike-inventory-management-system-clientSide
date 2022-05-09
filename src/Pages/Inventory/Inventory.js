@@ -38,9 +38,10 @@ const Inventory = () => {
     }
     return (
         <div className="container">
-            <h2>Selected Inventory Id:{inventoryId}</h2>
+            <h2 className="text-center tex-bold text-primary">Inventory Items</h2>
             <div className="inventory-container">
                 <img height="300px" width="300px" src={inventory.img} alt="" />
+                <h5>Id:{inventoryId}</h5>
                 <h2>{inventory.name}</h2>
                 <h5>Price:${inventory.price}</h5>
                 <p>Quantity:{inventory.quantity}</p>
